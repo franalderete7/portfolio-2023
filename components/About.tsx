@@ -1,8 +1,14 @@
 import { MotionConfig } from "framer-motion";
 import React from "react";
 import { motion } from "framer-motion";
+import { PageInfo } from "../typings";
+import { urlFor } from "../sanity";
 
-function About() {
+type Props = {
+  pageInfo: PageInfo;
+};
+
+function About({ pageInfo }: Props) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -22,7 +28,7 @@ function About() {
         }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
-        src="/resume.jpeg"
+        src={urlFor(pageInfo?.profilePic).url()}
         className="-mb-20 md:md-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]"
       />
 
@@ -32,12 +38,7 @@ function About() {
           <span className="underline decoration-[#F7AB0A]/50">little</span>{" "}
           background
         </h4>
-        <p className="text-base">
-          I am Francisco Alderete. From Salta, based in Buenos Aires, Argentina.
-          Software Engineer with two years of professional experience. I develop
-          solutions in the cloud using Microsoft Azure microservices. I speak
-          English and Spanish.
-        </p>
+        <p className="text-base">{pageInfo?.backgroundInformation}</p>
       </div>
     </motion.div>
   );
