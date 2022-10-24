@@ -26,13 +26,13 @@ function ExperienceCard({ experience }: Props) {
         <h4 className="text-4xl font-light">Software Engineer</h4>
         <p className="font-bold text-2xl mt-1">1910 Genetics</p>
         <div className="flex space-x-2 my-2">
-          {experience.technologies.map((technology) => (
+          {/* {experience.technologies.map((technology) => (
             <img
               key={technology._id}
               className="h-10 w-10 rounded-full"
               src={urlFor(technology.image).url()}
             />
-          ))}
+          ))} */}
         </div>
         <p className="uppercase py-5 text-gray-500">
           {new Date(experience.dateStarted).toDateString()} -{" "}
