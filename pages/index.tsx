@@ -7,7 +7,6 @@ import WorkExperience from "../components/WorkExperience";
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import ContactMe from "../components/ContactMe";
-import Link from "next/link";
 import { PageInfo, Experience, Project, Skill, Social } from "../typings";
 import { fetchPageInfo } from "../utils/fetchPageInfo";
 import { fetchExperience } from "../utils/fetchExperiences";
