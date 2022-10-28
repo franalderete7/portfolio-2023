@@ -13,6 +13,7 @@ import { fetchExperience } from "../utils/fetchExperiences";
 import { fetchSkills } from "../utils/fetchSkills";
 import { fetchProjects } from "../utils/fetchProjects";
 import { fetchSocial } from "../utils/fetchSocial";
+import Link from "next/link";
 
 type Props = {
   pageInfo: PageInfo;
@@ -56,7 +57,7 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
         <ContactMe />
       </section>
 
-      {/* <footer className="sticky bottom-5">
+      <footer className="sticky bottom-5">
         <div className="flex items-center justify-center">
           <Link href="#hero">
             <img
@@ -65,7 +66,7 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
             />
           </Link>
         </div>
-      </footer> */}
+      </footer>
     </div>
   );
 };
