@@ -14,7 +14,7 @@ const ContactMe = (props: Props) => {
   const { register, handleSubmit } = useForm<Inputs>();
 
   const onSubmit: SubmitHandler<Inputs> = (formData) => {
-    window.location.href = `mailto:franalderete7@gmail?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message} (${formData.email})`;
+    window.location.href = `mailto:franalderete7@gmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message} (${formData.email})`;
   };
 
   return (
@@ -25,7 +25,7 @@ const ContactMe = (props: Props) => {
       <div className="flex flex-col space-y-10">
         <h4 className="text-4xl font-semibold text-center">
           I have got just what you need.{" "}
-          <span className="decoration-[#F7AB0A]/50 underline">Let's talk.</span>
+          <span className="decoration-[#F7AB0A]/50 underline">{`Let's talk.`}</span>
         </h4>
         <div className="space-y-10">
           <div className="flex items-center space-x-5 justify-center">

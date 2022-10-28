@@ -9,7 +9,7 @@ type Props = {
 
 function ExperienceCard({ experience }: Props) {
   return (
-    <article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden">
+    <article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[700px] xl:w-[850px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-70 cursor-pointer transition-opacity duration-200 overflow-hidden">
       <motion.img
         initial={{
           y: -100,
@@ -23,32 +23,27 @@ function ExperienceCard({ experience }: Props) {
         alt=""
       />
       <div>
-        <h4 className="text-4xl font-light">Software Engineer</h4>
-        <p className="font-bold text-2xl mt-1">1910 Genetics</p>
+        <h4 className="text-4xl font-light">{experience.jobTitle}</h4>
+        <p className="font-bold text-2xl mt-1">{experience.company}</p>
         <div className="flex space-x-2 my-2">
-          {/* {experience.technologies.map((technology) => (
+          {experience.technologies.map((technology) => (
             <img
               key={technology._id}
               className="h-10 w-10 rounded-full"
-              src={urlFor(technology.image).url()}
+              src="https://cdn.sanity.io/images/bhrnkmlu/production/84b5e112d61f8acb6ee4d75443d51e1c1951c920-280x280.png"
             />
-          ))} */}
+          ))}
         </div>
         <p className="uppercase py-5 text-gray-500">
-          {new Date(experience.dateStarted).toDateString()} -{" "}
+          {new Date(experience.dateStarted).toDateString().slice(4)} -{" "}
           {experience.isCurrentlyWorkingHere
             ? "Present"
-            : new Date(experience.dateEnded).toDateString()}
+            : new Date(experience.dateEnded).toDateString().slice(4)}
         </p>
-        <ul className="list-disc space-y-4 ml-5 text-lg h-96 overflow-y-scroll scrollbar-thin scrollbar-track-black scrollbar-thumb-[#F7AB0A]/80">
+        <ul className="list-disc pr-5 space-y-3 text-base h-[250px] md:h-[210px] lg:h-[190px] overflow-y-scroll scrollbar-thin scrollbar-track-black scrollbar-thumb-[#F7AB0A]/80">
           {experience.points.map((point, i) => (
             <li key={i}>{point}</li>
           ))}
-          <li>Summary points</li>
-          <li>Summary points</li>
-          <li>Summary points</li>
-          <li>Summary points</li>
-          <li>Summary points</li>
         </ul>
       </div>
     </article>

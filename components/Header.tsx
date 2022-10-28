@@ -61,7 +61,7 @@ function Header({ socials }: Props) {
             bgColor="transparent"
           />
           <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
-            Let's get in touch
+            {`Let's get in touch`}
           </p>
         </motion.div>
       </Link>

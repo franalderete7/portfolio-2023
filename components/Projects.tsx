@@ -19,7 +19,7 @@ const Projects = ({ projects }: Props) => {
             key={i}
             className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen"
           >
-            {/* <motion.img
+            <motion.img
               initial={{
                 y: -300,
                 opacity: 0,
@@ -30,9 +30,10 @@ const Projects = ({ projects }: Props) => {
                 y: 0,
               }}
               viewport={{ once: true }}
-              src={urlFor(project?.image).url()}
+              src="https://cdn.sanity.io/images/bhrnkmlu/production/496e705cdd1e4480a34050f0eb90812a8c63fc77-682x386.png"
               alt=""
-            /> */}
+              className="md:w-[550px] md:h-[300px] rounded-2xl"
+            />
 
             <div className="space-y-10 px-10 md:px-10 max-w-6xl">
               <h4 className="text-4xl font-semibold text-center">
@@ -43,14 +44,14 @@ const Projects = ({ projects }: Props) => {
                 {project?.title}
               </h4>
               <div className="flex items-center space-x-2 justify-center">
-                {/* {project?.technologies.map((technology) => (
+                {project?.technologies.map((technology) => (
                   <img
-                    className="h-10 w-10"
+                    className="h-10 w-10 rounded-full"
                     key={technology._id}
-                    src={urlFor(technology.image).url()}
+                    src="https://cdn.sanity.io/images/bhrnkmlu/production/84b5e112d61f8acb6ee4d75443d51e1c1951c920-280x280.png"
                     alt=""
                   />
-                ))} */}
+                ))}
               </div>
               <p className="text-lg text-center md:text-left">
                 {project?.summary}
