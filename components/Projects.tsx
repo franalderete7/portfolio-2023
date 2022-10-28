@@ -16,7 +16,7 @@ const Projects = ({ projects }: Props) => {
         {projects?.map((project, i) => (
           <div
             key={i}
-            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen"
+            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-10 md:p-44 h-screen"
           >
             <motion.img
               initial={{
@@ -31,7 +31,7 @@ const Projects = ({ projects }: Props) => {
               viewport={{ once: true }}
               src="https://cdn.sanity.io/images/bhrnkmlu/production/496e705cdd1e4480a34050f0eb90812a8c63fc77-682x386.png"
               alt=""
-              className="md:w-[550px] md:h-[300px] rounded-xl"
+              className="w-[300px] h-[165px] md:w-[500px] md:h-[270px] rounded-xl"
             />
 
             <div className="space-y-10 px-10 md:px-10 max-w-6xl">
