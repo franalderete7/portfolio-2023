@@ -12,9 +12,9 @@ type Props = {
 function Hero({ pageInfo }: Props) {
   const [text, count] = useTypewriter({
     words: [
-      `Hi, my name is ${pageInfo?.name}`,
-      "Dude-who-loves-Coffe.tsx",
-      "<ButLovesToCodeMore />",
+      `Hi, my name is ${pageInfo?.name}.`,
+      "Dude who loves coffee!",
+      "But loves to code more <3",
     ],
     loop: true,
     delaySpeed: 2000,
@@ -31,7 +31,7 @@ function Hero({ pageInfo }: Props) {
         <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">
           {pageInfo?.role}
         </h2>
-        <h1 className="text-5xl lg:text-6xl font-semibold scroll-px-10">
+        <h1 className="text-3xl lg:text-6xl font-semibold scroll-px-10">
           <span className="mr-3">{text}</span>
           <Cursor cursorColor="#F7ABBA" />
         </h1>

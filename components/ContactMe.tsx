@@ -23,7 +23,7 @@ const ContactMe = (props: Props) => {
         Contact
       </h3>
       <div className="flex flex-col space-y-10">
-        <h4 className="text-4xl font-semibold text-center">
+        <h4 className="text-xl md:text-4xl font-semibold text-center">
           I have got just what you need.{" "}
           <span className="decoration-[#F7AB0A]/50 underline">{`Let's talk.`}</span>
         </h4>
@@ -44,19 +44,19 @@ const ContactMe = (props: Props) => {
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-col space-y-2 w-fit mx-auto"
+          className="flex flex-col space-y-2 w-[370px] md:w-fit mx-auto"
         >
-          <div className="flex space-x-2">
+          <div className="flex space-x-2 md:w-fit">
             <input
               {...register("name")}
               placeholder="Name"
-              className="contactInput"
+              className="contactInput w-6/12"
               type="text"
             />
             <input
               {...register("email")}
               placeholder="Email"
-              className="contactInput"
+              className="contactInput w-6/12"
               type="email"
             />
           </div>

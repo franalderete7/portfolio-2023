@@ -31,11 +31,11 @@ const Projects = ({ projects }: Props) => {
               viewport={{ once: true }}
               src="https://cdn.sanity.io/images/bhrnkmlu/production/496e705cdd1e4480a34050f0eb90812a8c63fc77-682x386.png"
               alt=""
-              className="md:w-[550px] md:h-[300px] rounded-2xl"
+              className="md:w-[550px] md:h-[300px] rounded-xl"
             />
 
             <div className="space-y-10 px-10 md:px-10 max-w-6xl">
-              <h4 className="text-4xl font-semibold text-center">
+              <h4 className="text-xl md:text-4xl font-semibold text-center">
                 <span className="underline decoration-[#F7AB0A]/50">
                   {" "}
                   Case Study {i + 1} of {projects.length}:
@@ -52,7 +52,7 @@ const Projects = ({ projects }: Props) => {
                   />
                 ))}
               </div>
-              <p className="text-lg text-center md:text-left">
+              <p className="text-base md:text-lg text-center md:text-left">
                 {project?.summary}
               </p>
             </div>
