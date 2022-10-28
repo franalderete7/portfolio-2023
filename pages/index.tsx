@@ -57,7 +57,7 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
         <ContactMe />
       </section>
 
-      <footer className="sticky bottom-5">
+      {/* <footer className="sticky bottom-5">
         <div className="flex items-center justify-center">
           <Link href="#hero">
             <img
@@ -66,7 +66,7 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
             />
           </Link>
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 };
