@@ -18,7 +18,7 @@ function ExperienceCard({ experience }: Props) {
         transition={{ duration: 1.2 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="w-20 h-20 md:w-32 md:h32 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center"
+        className="w-20 h-20 md:w-32 md:h-32 rounded-full xl:w-[150px] xl:h-[150px] object-cover object-center"
         src={urlFor(experience?.companyImage).url()}
         alt=""
       />
@@ -46,7 +46,7 @@ function ExperienceCard({ experience }: Props) {
         </p>
         <ul className="list-disc space-y-3 text-sm md:text-base h-[260px] md:h-[210px] lg:h-[190px] overflow-y-scroll scrollbar-thin scrollbar-track-black scrollbar-thumb-[#F7AB0A]/80">
           {experience.points.map((point, i) => (
-            <li key={i}>{point}</li>
+            <li key={i}>• {point}</li>
           ))}
         </ul>
       </div>
