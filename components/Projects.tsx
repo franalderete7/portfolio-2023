@@ -31,7 +31,7 @@ const Projects = ({ projects }: Props) => {
               viewport={{ once: true }}
               src={project.source}
               alt=""
-              className="w-[300px] h-[165px] md:w-[500px] md:h-[270px] rounded-xl object-contain"
+              className="w-[300px] h-[165px] md:w-[500px] md:h-[270px] rounded-xl"
             />
 
             <div className="space-y-10 px-10 md:px-10 max-w-6xl">
