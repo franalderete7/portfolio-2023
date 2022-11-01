@@ -24,5 +24,11 @@ export default {
         hotspot: true,
       },
     },
+    {
+      name: "source",
+      title: "Source",
+      description: "Skill image url",
+      type: "string",
+    },
   ],
 };

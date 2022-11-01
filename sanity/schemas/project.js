@@ -33,5 +33,11 @@ export default {
       title: "LinkToBuild",
       type: "url",
     },
+    {
+      name: "source",
+      title: "Source",
+      description: "Project image url",
+      type: "string",
+    },
   ],
 };

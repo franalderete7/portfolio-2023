@@ -27,14 +27,15 @@ function ExperienceCard({ experience }: Props) {
           {experience.jobTitle}
         </h4>
         <p className="font-bold text-lg md:text-2xl mt-1">
-          {experience.company}
+          {experience.company} -{" "}
+          <span className="font-bold text-lg italic">Remote</span>
         </p>
-        <div className="flex space-x-2 my-2">
+        <div className="flex flex-wrap">
           {experience.technologies.map((technology) => (
             <img
               key={technology._id}
-              className="h-10 w-10 rounded-full"
-              src="https://cdn.sanity.io/images/bhrnkmlu/production/84b5e112d61f8acb6ee4d75443d51e1c1951c920-280x280.png"
+              className="h-10 w-10 rounded-full mr-2 mb-2 md:mb-2 md:mr-0"
+              src={technology.source}
             />
           ))}
         </div>

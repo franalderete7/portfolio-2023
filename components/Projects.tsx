@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Project } from "../typings";
+import { Project, Skill } from "../typings";
 
 type Props = {
   projects: Project[];
@@ -29,9 +29,9 @@ const Projects = ({ projects }: Props) => {
                 y: 0,
               }}
               viewport={{ once: true }}
-              src="https://cdn.sanity.io/images/bhrnkmlu/production/496e705cdd1e4480a34050f0eb90812a8c63fc77-682x386.png"
+              src={project.source}
               alt=""
-              className="w-[300px] h-[165px] md:w-[500px] md:h-[270px] rounded-xl"
+              className="w-[300px] h-[165px] md:w-[500px] md:h-[270px] rounded-xl object-contain"
             />
 
             <div className="space-y-10 px-10 md:px-10 max-w-6xl">
@@ -47,7 +47,7 @@ const Projects = ({ projects }: Props) => {
                   <img
                     className="h-10 w-10 rounded-full"
                     key={technology._id}
-                    src="https://cdn.sanity.io/images/bhrnkmlu/production/84b5e112d61f8acb6ee4d75443d51e1c1951c920-280x280.png"
+                    src={technology.source}
                     alt=""
                   />
                 ))}

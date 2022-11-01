@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import React from "react";
 import { urlFor } from "../sanity";
 import { Skill } from "../typings";
-import Image from "next/image";
 
 type Props = {
   skill: Skill;
@@ -26,7 +25,7 @@ const Skill = ({ skill, directionLeft }: Props) => {
         }}
         className="relative rounded-full border border-gray-500 object-cover w-[72px] h-[72px] md:w-28 md:h-28 filter group-hover:grayscale transition duration-300 ease-in-out"
         alt=""
-        src="https://cdn.sanity.io/images/bhrnkmlu/production/84b5e112d61f8acb6ee4d75443d51e1c1951c920-280x280.png"
+        src={skill.source}
       />
 
       <div className="absolute opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out group-hover:bg-white w-[72px] h-[72px] md:w-28 md:h-28 rounded-full z-0">
