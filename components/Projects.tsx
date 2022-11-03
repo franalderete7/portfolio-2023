@@ -31,7 +31,7 @@ const Projects = ({ projects }: Props) => {
               viewport={{ once: true }}
               src={project.source}
               alt=""
-              className="w-[300px] h-[165px] md:w-[500px] md:h-[270px]"
+              className="w-[300px] h-[165px] md:w-[500px] md:h-[270px] rounded-xl"
             />
 
             <div className="space-y-10 px-10 md:px-10 max-w-6xl">
@@ -45,7 +45,7 @@ const Projects = ({ projects }: Props) => {
               <div className="flex items-center space-x-2 justify-center">
                 {project?.technologies.map((technology) => (
                   <img
-                    className="h-10 w-10 rounded-full"
+                    className="h-10 w-10"
                     key={technology._id}
                     src={technology.source}
                     alt=""
