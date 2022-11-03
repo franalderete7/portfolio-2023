@@ -23,7 +23,9 @@ const Skill = ({ skill, directionLeft }: Props) => {
           opacity: 1,
           x: 0,
         }}
-        className="relative rounded-full border border-gray-500 object-cover w-[72px] h-[72px] md:w-28 md:h-28 filter group-hover:grayscale transition duration-300 ease-in-out"
+        className={`relative ${
+          skill.source.endsWith("280x280.png") ? "rounded-full" : ""
+        } object-cover w-[72px] h-[72px] md:w-28 md:h-28 filter group-hover:grayscale transition duration-300 ease-in-out`}
         alt=""
         src={skill.source}
       />
